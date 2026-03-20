@@ -1,0 +1,9 @@
+### definir paramentros globais
+global:
+  scrape_interval: 5s # Coleta os dados a cada 5 seg
+
+### definir parametros de configuração de coleta nos endipoit fixos 
+scrape_configs:
+  - job_name: 'node-app' # nome da aplicação
+    static_configs:
+      - targets: ['app:3000'] # 'app' é o nome que daremos ao container no Docker
